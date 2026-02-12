@@ -1,0 +1,312 @@
+    <!DOCTYPE html>
+    <html lang="th">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>เรียนรู้การเขียนอัลกอริธึม | Algorithm & Computational Thinking</title>
+        <meta name="description" content="เว็บไซต์เพื่อการเรียนรู้การเขียนอัลกอริธึม แนวคิดเชิงคำนวณ Computational Thinking ผังงาน Pseudocode และแนวข้อสอบแบบเจาะลึก">
+        <meta name="keywords" content="อัลกอริธึม, Algorithm, Computational Thinking, ผังงาน, Pseudocode">
+        <meta name="author" content="Student Project">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://yourdomain.com/">
+
+        <meta property="og:title" content="เว็บไซต์เรียนรู้การเขียนอัลกอริธึม">
+        <meta property="og:description" content="แหล่งเรียนรู้ Algorithm และ Computational Thinking สำหรับผู้เริ่มต้น">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://yourdomain.com/">
+        <meta property="og:locale" content="th_TH">
+
+        <link rel="stylesheet" href="style.css">
+
+        <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "เว็บไซต์เรียนรู้อัลกอริธึม",
+        "description": "แหล่งเรียนรู้ Algorithm และ Computational Thinking สำหรับผู้เริ่มต้น",
+        "url": "https://yourdomain.com",
+        "educationalLevel": "Beginner",
+        "teaches": "Algorithm, Computational Thinking, Programming"
+        }
+        </script>
+    </head>
+    <body>
+    <header>
+        <h1>หน่วยการเรียนรู้ที่ 3: การออกแบบและการเขียนอัลกอริทึม</h1>
+        <nav role="navigation" aria-label="เมนูหลัก">
+            <ul>
+                <li><a href="index2.html">หน่วยการเรียนรู้ที่ 1</a></li>
+                <li><a href="index3.html">หน่วยการเรียนรู้ที่ 2</a></li>
+                <li><a href="index4.html">หน่วยการเรียนรู้ที่ 3</a></li>
+                <li><a href="index5.html">หน่วยการเรียนรู้ที่ 4</a></li>
+                <li><a href="index6.html">สมาชิกภายในกลุ่ม</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+
+<section class="section">
+    <h2> ข้อมูล vs สารสนเทศ (Data & Information)</h2>
+    <p>
+        หัวใจสำคัญของบทนี้คือการแยกให้ออกว่าอะไรคือ
+        <strong>ข้อมูล (Data)</strong> และอะไรคือ
+        <strong>สารสนเทศ (Information)</strong>
+    </p>
+
+    <ul>
+        <li>
+            <strong>ข้อมูล (Data):</strong>
+            ข้อเท็จจริงดิบ ๆ ที่ยังไม่ผ่านการประมวลผล
+            เช่น ราคาสินค้า, ปริมาณรถที่เข้าร้าน, จำนวนนักเรียนมาสาย
+        </li>
+        <li>
+            <strong>สารสนเทศ (Information):</strong>
+            ข้อมูลที่ผ่านการประมวลผล วิเคราะห์ หรือสรุปผลแล้ว
+            เช่น รายงานประจำปี, กราฟสถิติ, ผลการวิเคราะห์ความต้องการ
+        </li>
+    </ul>
+    <img src="3.1.png" alt="">
+    <img src="3.2.png" alt="">
+
+    <p><strong>จุดเน้นข้อสอบ:</strong> สารสนเทศมักอยู่ในรูปของ
+        <em>รายงาน</em>, <em>การสรุปผล</em> หรือ <em>กราฟ</em>
+    </p>
+</section>
+
+<section class="section">
+    <h2> แหล่งที่มาของข้อมูล (Data Sources)</h2>
+    <p>
+        ข้อนี้ออกสอบบ่อยมาก โดยเฉพาะการแยกระหว่าง
+        <strong>ข้อมูลปฐมภูมิ</strong> และ <strong>ข้อมูลทุติยภูมิ</strong>
+    </p>
+
+    <ul>
+        <li>
+            <strong>ข้อมูลปฐมภูมิ (Primary Data):</strong>
+            ข้อมูลที่เก็บรวบรวมขึ้นมาเองโดยตรง
+            เช่น การใช้เครื่องอ่านบาร์โค้ด, การสัมภาษณ์, การนับจำนวนรถ
+        </li>
+        <li>
+            <strong>ข้อมูลทุติยภูมิ (Secondary Data):</strong>
+            ข้อมูลที่มีผู้อื่นรวบรวมไว้แล้ว และนำมาใช้ต่อ
+            เช่น สถิติจากโรงเรียน, ข้อมูลจากอินเทอร์เน็ต, รายงานของบริษัท
+        </li>
+    </ul>
+    <img src="3.3.png" alt="">
+</section>
+
+<section class="section">
+    <h2>ระบบสารสนเทศฐานคอมพิวเตอร์ (CBIS)</h2>
+    <p>
+        ระบบสารสนเทศฐานคอมพิวเตอร์ (CBIS) จะทำงานได้สมบูรณ์
+        ต้องมีองค์ประกอบ <strong>ครบ 5 อย่าง</strong>
+    </p>
+
+    <ul>
+        <li><strong>ฮาร์ดแวร์ (Hardware):</strong> เครื่องคอมพิวเตอร์และอุปกรณ์</li>
+        <li><strong>ซอฟต์แวร์ (Software):</strong> โปรแกรมที่ใช้สั่งงาน</li>
+        <li><strong>บุคลากร (Peopleware):</strong> ผู้ใช้งานหรือผู้ดูแลระบบ</li>
+        <li><strong>ข้อมูล/สารสนเทศ (Data/Information):</strong> วัตถุดิบของระบบ</li>
+        <li><strong>กระบวนการทำงาน (Procedure):</strong> ขั้นตอนหรือคู่มือการทำงาน</li>
+    </ul>
+    <img src="3.4.png" alt="">
+
+    <p><strong>จำ:</strong> ข้อสอบมักถามว่า “ข้อใดไม่ใช่องค์ประกอบของ CBIS”</p>
+</section>
+
+<section class="section">
+    <h2> วัฏจักรการประมวลผลสารสนเทศ (Processing Cycle)</h2>
+    <p>
+        เป็นลำดับขั้นตอนการทำงานของคอมพิวเตอร์ ตั้งแต่รับข้อมูลจนถึงจัดเก็บ
+    </p>
+
+    <ul>
+        <li><strong>Input:</strong> การนำเข้าข้อมูล เช่น พิมพ์ชื่อ สแกนบาร์โค้ด</li>
+        <li><strong>Process:</strong> การคำนวณ เรียงลำดับ จัดกลุ่ม (ขั้นตอนสำคัญที่สุด)</li>
+        <li><strong>Output:</strong> การแสดงผล เช่น รายงาน หรือกราฟ</li>
+        <li><strong>Storage:</strong> การจัดเก็บข้อมูลลงอุปกรณ์หรือคลาวด์</li>
+    </ul>
+    <img src="3.5.png" alt="">
+</section>
+
+<section class="section">
+    <h2> ประเภทของซอฟต์แวร์ (Software Types)</h2>
+
+    <ul>
+        <li>
+            <strong>ซอฟต์แวร์ระบบ (System Software):</strong>
+            จำเป็นต่อการทำงานของเครื่อง เช่น Windows, macOS
+        </li>
+        <li>
+            <strong>ซอฟต์แวร์ประยุกต์ (Application Software):</strong>
+            โปรแกรมที่ใช้ทำงานเฉพาะด้าน
+            <ul>
+                <li>Word Processing: ทำรายงาน</li>
+                <li>Spreadsheet: คำนวณและตาราง</li>
+                <li>Presentation: งานนำเสนอ</li>
+                <li>Communications: ประชุมทางไกลหรือสื่อสาร</li>
+            </ul>
+        </li>
+    </ul>
+    <img src="3.6.png" alt="">
+</section>
+
+<section class="section">
+    <h2> การเลือกวิธีนำเสนอข้อมูลให้เหมาะสม</h2>
+    <p>
+        การเลือกกราฟต้องสอดคล้องกับลักษณะของข้อมูลและการประมวลผล
+    </p>
+
+    <ul>
+        <li><strong>ร้อยละ / เปอร์เซ็นต์:</strong> เหมาะกับแผนภูมิวงกลม</li>
+        <li><strong>การเปลี่ยนแปลงตามเวลา:</strong> เหมาะกับกราฟเส้น</li>
+        <li><strong>การเปรียบเทียบปริมาณ:</strong> เหมาะกับแผนภูมิแท่ง</li>
+    </ul>
+</section>
+
+</main>
+
+    <footer>
+    </footer>
+    <section id="quiz" class="section">
+        <h2>คลังข้อสอบ (บทที่ 3 การจัดการข้อมูลสารสนเทศ)</h2>
+
+        <form id="quiz-form" aria-label="แบบทดสอบความรู้">
+
+            <!-- ข้อ 1 -->
+            <div class="quiz-item">
+                <p><strong>1. ข้อใดเป็นข้อมูลที่ต่างจากพวก</strong></p>
+                <label><input type="radio" name="q1" value="1"> ราคาสินค้าที่อยู่ในร้านค้าต่าง ๆ
+    </label><br>
+                <label><input type="radio" name="q1" value="2"> ความต้องการเรียนต่อของนักเรียน
+    </label><br>
+                <label><input type="radio" name="q1" value="3"> ปริมาณรถที่เข้ามาใช้บริการร้านอาหารแห่งหนึ่ง
+    </label><br>
+                <label><input type="radio" name="q1" value="4"> รายงานการประเมินโครงการประจำปีของบริษัทแห่งหนึ่ง
+    </label>
+            </div>
+
+            <!-- ข้อ 2 -->
+            <div class="quiz-item">
+                <p><strong>2. สถิติจำนวนนักเรียนที่มาเรียนสายของโรงเรียนแห่งหนึ่ง จัดเป็นข้อมูลชนิดใด</strong></p>
+                <label><input type="radio" name="q2" value="1"> ข้อมูลปฐมภูมิ</label><br>
+                <label><input type="radio" name="q2" value="2"> ข้อมูลทุติยภูมิ</label><br>
+                <label><input type="radio" name="q2" value="3"> ข้อมูลตติยภูมิ
+    </label><br>
+                <label><input type="radio" name="q2" value="4"> ข้อมูลเบื้องต้น 
+    </label>
+            </div>
+
+            <!-- ข้อ 3 -->
+            <div class="quiz-item">
+                <p><strong>3. ข้อมูลสินค้าที่ได้จากเครื่องอ่านบาร์โคด เป็นข้อมูลประเภทใด</strong></p>
+                <label><input type="radio" name="q3" value="1"> ข้อมูลปฐมภูมิ</label><br>
+                <label><input type="radio" name="q3" value="2"> ข้อมูลทุติยภูมิ</label><br>
+                <label><input type="radio" name="q3" value="3"> ข้อมูลตติยภูมิ
+    </label><br>
+                <label><input type="radio" name="q3" value="4"> ข้อมูลเบื้องต้น </label>
+            </div>
+
+            <!-- ข้อ 4 -->
+            <div class="quiz-item">
+                <p><strong>4. สารสนเทศที่ดีควรมีลักษณะอย่างไร</strong></p>
+                <label><input type="radio" name="q4" value="1"> สามารถตรวจสอบแหล่งที่มาได้
+    </label><br>
+                <label><input type="radio" name="q4" value="2"> เป็นข้อมูลเก่าที่นำมาประมวลใหม่
+    </label><br>
+                <label><input type="radio" name="q4" value="3"> มีการจัดเก็บข้อมูลไว้ในแฟ้มสำรอง
+    </label><br>
+                <label><input type="radio" name="q4" value="4"> เก็บข้อมูลเพียงบางส่วนอย่างพอเพียง
+    </label>
+            </div>
+
+            <!-- ข้อ 5 -->
+            <div class="quiz-item">
+                <p><strong>5. ระบบสารสนเทศแบบใช้คอมพิวเตอร์ (CBIS) ประกอบด้วยองค์ประกอบใดบ้าง</strong></p>
+                <label><input type="radio" name="q5" value="1"> บุคลากร ข้อมูลและสารสนเทศ กระบวนการทำงาน ภาพ คู่มือ
+    </label><br>
+                <label><input type="radio" name="q5" value="2"> ฮาร์ดแวร์ ซอฟต์แวร์ เครื่องคอมพิวเตอร์ ข้อมูลและสารสนเทศ บุคลากร
+    </label><br>
+                <label><input type="radio" name="q5" value="3"> ฮาร์ดแวร์ ซอฟต์แวร์ บุคลากร ข้อมูลและสารสนเทศ กระบวนการทำงาน
+    </label><br>
+                <label><input type="radio" name="q5" value="4"> ฮาร์ดแวร์ ซอฟต์แวร์ บุคลากร ข้อมูลและสารสนเทศ กระบวนการทำงาน เครื่องคอมพิวเตอร์
+
+    </label>
+            </div>
+
+            <!-- ข้อ 6 -->
+            <div class="quiz-item">
+                <p><strong>6. หากไม่มีซอฟต์แวร์ในข้อใด เครื่องคอมพิวเตอร์จะไม่สามารถทำงานได้</strong></p>
+                <label><input type="radio" name="q6" value="1"> ซอฟต์แวร์</label><br>
+                <label><input type="radio" name="q6" value="2"> ซอฟต์แวร์ประยุกต์
+    </label><br>
+                <label><input type="radio" name="q6" value="3"> ซอฟต์แวร์ประมวลผล
+    </label><br>
+                <label><input type="radio" name="q6" value="4"> ซอฟต์แวร์ประยุกต์ และ ซอฟต์แวร์ระบบ
+    </label>
+            </div>
+
+            <!-- ข้อ 7 -->
+            <div class="quiz-item">
+                <p><strong>7. การดำเนินการกับข้อมูล เช่น การจัดกลุ่ม การเรียงลำดับ และการคำนวณ เป็นขั้นตอนใดของวัฏจักรการประมวลผลสารสนเทศ</strong></p>
+                <label><input type="radio" name="q7" value="1"> การนำเข้าข้อมูล (Input)
+    </label><br>
+                <label><input type="radio" name="q7" value="2"> การเก็บรักษาข้อมูล (Storage)
+    </label><br>
+                <label><input type="radio" name="q7" value="3"> การประมวลผลข้อมูล (Process)</label><br>
+                <label><input type="radio" name="q7" value="4"> การแสดงผลสารสนเทศ (Output)
+    </label>
+            </div>
+
+            <!-- ข้อ 8 -->
+            <div class="quiz-item">
+                <p><strong>8. หากต้องการจัดทำเอกสารรายงาน ควรเลือกใช้ซอฟต์แวร์ประเภทใด</strong></p>
+                <label><input type="radio" name="q8" value="1"> Spreadsheet </label><br>
+                <label><input type="radio" name="q8" value="2"> Presentation Software
+    </label><br>
+                <label><input type="radio" name="q8" value="3"> Word Processing Software
+    </label><br>
+                <label><input type="radio" name="q8" value="4"> Website and Communications Software
+    </label>
+            </div>
+
+            <!-- ข้อ 9 -->
+            <div class="quiz-item">
+                <p><strong>9. หากต้องการประชุมทางไกลผ่านเครือข่ายอินเทอร์เน็ต ควรเลือกใช้ซอฟต์แวร์ประเภทใด</strong></p>
+                <label><input type="radio" name="q9" value="1"> Presentation </label><br>
+                <label><input type="radio" name="q9" value="2"> Spreadsheet Software
+    </label><br>
+                <label><input type="radio" name="q9" value="3"> Database Management Software
+    </label><br>
+                <label><input type="radio" name="q9" value="4"> Website and Communications Software
+    </label>
+            </div>
+
+            <!-- ข้อ 10 -->
+            <div class="quiz-item">
+                <p><strong>10. ข้อใดแสดงถึงการเลือกวิธีประมวลผลและการนำเสนอข้อมูลได้สอดคล้องกัน</strong></p>
+                <label><input type="radio" name="q10" value="1"> เบญคำนวณชุดข้อมูลเป็นเปอร์เซ็นต์ แล้วนำเสนอข้อมูลด้วยกราฟเส้น</label><br>
+                <label><input type="radio" name="q10" value="2"> โจคำนวณชุดข้อมูลเป็นร้อยละ แล้วนำเสนอข้อมูลด้วยแผนภูมิวงกลม
+    </label><br>
+                <label><input type="radio" name="q10" value="3"> กานคำนวณชุดข้อมูลเป็นเลขทศนิยม แล้วนำเสนอข้อมูลด้วยแผนภูมิรูปภาพ
+    </label><br>
+                <label><input type="radio" name="q10" value="4"> กิ่งคำนวณชุดข้อมูลเป็นค่าเฉลี่ยเลขคณิต แล้วนำเสนอข้อมูลด้วยแผนภูมิแจงนับ
+    </label>
+            </div>
+
+
+                    <button type="submit">ตรวจสอบคำตอบ</button>
+                </form>
+
+                <div id="quiz-result" role="status" aria-live="polite"></div>
+            </section>
+        </main>
+
+        <footer role="contentinfo">
+        </footer>
+
+        <script src="script3.js"></script>
+    </body>
+    </html>
+
+

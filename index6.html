@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สมาชิกภายในกลุ่ม | Algorithm & Computational Thinking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>สมาชิกภายในกลุ่ม</h1>
+        <nav role="navigation" aria-label="เมนูหลัก">
+            <ul>
+                <li><a href="index2.html">หน่วยการเรียนรู้ที่ 1</a></li>
+                <li><a href="index3.html">หน่วยการเรียนรู้ที่ 2</a></li>
+                <li><a href="index4.html">หน่วยการเรียนรู้ที่ 3</a></li>
+                <li><a href="index5.html">หน่วยการเรียนรู้ที่ 4</a></li>
+                <li><a href="index6.html">สมาชิกภายในกลุ่ม</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2>สมาชิกภายในกลุ่ม</h2>
+
+            <div class="team-container">
+
+                <div class="member-card" onclick="openModal(0)">
+                    <div class="member-img">
+                        <img src="n10.jpg" alt="ชื่อสมาชิก" class="adjust-photo">
+                    </div>
+                    <div class="member-info">
+                        <h3>นาย ธันวา พาพินิจ</h3>
+                        <p>เลขที่ 10 ชั้น ม.6/9</p>
+                        <span class="role">สมาชิก</span>
+                    </div>
+                </div>
+
+                <div class="member-card" onclick="openModal(1)">
+                    <div class="member-img">
+                        <img src="m6.jpg" alt="ชื่อสมาชิก" class="adjust-photo">
+                    </div>
+                    <div class="member-info">
+                        <h3>นาย ณัฐวุฒิ ผมงาม</h3>
+                        <p>เลขที่ 15 ชั้น ม.6/9</p>
+                        <span class="role">สมาชิก</span>
+                    </div>
+                </div>
+
+                <div class="member-card" onclick="openModal(2)">
+                    <div class="member-img">
+                        <img src="m5.jpg" alt="ชื่อสมาชิก" class="adjust-photo5">
+                    </div>
+                    <div class="member-info">
+                        <h3>นายสราวุธ แคล้วครบุรี</h3>
+                        <p>เลขที่ 16 ชั้น ม.6/9</p>
+                        <span class="role">สมาชิก</span>
+                    </div>
+                </div>
+
+                <div class="member-card" onclick="openModal(3)">
+                    <div class="member-img">
+                        <img src="m4.jpg" alt="ชื่อสมาชิก" class="adjust-photo">
+                    </div>
+                    <div class="member-info">
+                        <h3>นางสาวกชพร แฉะกระโทก</h3>
+                        <p>เลขที่ 20 ชั้น ม.6/9</p>
+                        <span class="role">สมาชิก</span>
+                    </div>
+                </div>
+
+                <div class="member-card" onclick="openModal(4)">
+                    <div class="member-img">
+                        <img src="m3.jpg" alt="ชื่อสมาชิก" class="adjust-photo">
+                    </div>
+                    <div class="member-info">
+                        <h3>นางสาวเกศกนก กกกระโทก</h3>
+                        <p>เลขที่ 33 ชั้น ม.6/9</p>
+                        <span class="role">สมาชิก</span>
+                    </div>
+                </div>
+
+                <div class="member-card" onclick="openModal(5)">
+                    <div class="member-img">
+                        <img src="m2.jpg" alt="ชื่อสมาชิก" class="adjust-photo2">
+                    </div>
+                    <div class="member-info">
+                        <h3>นางสาวสุภาพร สุขสุมิตร</h3>
+                        <p>เลขที่ 37 ชั้น ม.6/9</p>
+                        <span class="role">สมาชิก</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="memberModal" class="modal" onclick="closeModalOutside(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <h2 style="margin: 0; font-size: 1.5rem;">รายละเอียดสมาชิก</h2>
+            </div>
+            <div class="modal-body">
+                <img id="modalImg" src="" alt="รูปสมาชิก" class="modal-img">
+                <h3 id="modalName" class="modal-title"></h3>
+                <p id="modalClass" class="modal-subtitle"></p>
+
+                <div class="detail-section">
+                    <h4>ข้อมูลส่วนตัว</h4>
+                    <ul class="detail-list">
+                        <li><strong>ชื่อ-นามสกุล:</strong> <span id="modalFullName"></span></li>
+                        <li><strong>เลขที่:</strong> <span id="modalNumber"></span></li>
+                        <li><strong>ชั้น:</strong> <span id="modalGrade"></span></li>
+                        <li><strong>ตำแหน่ง:</strong> <span id="modalRole"></span></li>
+                    </ul>
+                </div>
+
+                <div class="detail-section">
+                    <h4>หน้าที่รับผิดชอบ</h4>
+                    <p id="modalResponsibility"></p>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer role="contentinfo">
+    </footer>
+
+<script src="script5.js"></script>
+</body>
+
+</html>

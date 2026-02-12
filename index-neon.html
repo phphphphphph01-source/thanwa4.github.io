@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Algorithm Learning | Dark Neon UI</title>
+<link rel="stylesheet" href="style-neon.css">
+</head>
+
+<body>
+
+<button id="darkToggle" class="toggle">🌙 Dark Mode</button>
+
+<header class="glass">
+  <h1>การออกแบบและการเขียนอัลกอริทึม</h1>
+  <p>Algorithm & Computational Thinking</p>
+</header>
+
+<main>
+  <section class="card">
+    <h2>Abstraction</h2>
+    <p>เลือกเฉพาะสาระสำคัญของปัญหา</p>
+  </section>
+
+  <section class="card">
+    <h2>Algorithm</h2>
+    <p>ลำดับขั้นตอนการแก้ปัญหาอย่างเป็นระบบ</p>
+  </section>
+</main>
+
+<footer class="glass">
+  <p>Student Project © 2026</p>
+</footer>
+
+<script>
+const toggle = document.getElementById("darkToggle");
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  toggle.textContent = document.body.classList.contains("dark")
+    ? "☀️ Light Mode"
+    : "🌙 Dark Mode";
+});
+</script>
+
+</body>
+</html>

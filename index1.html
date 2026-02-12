@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เข้าสู่เว็บไซต์</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- โหลดไอคอน -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+
+/* ===== พื้นหลังเต็มจอ ===== */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* ===== Animation ตอนโหลด ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Header ให้ดูโดดขึ้น ===== */
+header {
+    text-align: center;
+    padding: 70px 20px;
+    margin: 0 0 40px 0;
+    border-radius: 0;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+/* เส้นแสงบาง ๆ ใต้ header */
+header::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 4px;
+    margin: 20px auto 0;
+    border-radius: 5px;
+    background: currentColor;
+    opacity: 0.3;
+}
+
+/* ===== ปุ่มมีมิติขึ้น ===== */
+button {
+    border: none;
+    transition: 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+button:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* ===== Floating Icons ===== */
+.floating-icon {
+    position: fixed;
+    font-size: 42px;
+    opacity: 0.10;
+    animation: float 7s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* ตำแหน่งไอคอน */
+.icon1 { top: 12%; left: 8%; animation-delay: 0s; }
+.icon2 { top: 75%; left: 15%; animation-delay: 2s; }
+.icon3 { top: 25%; right: 10%; animation-delay: 1s; }
+.icon4 { top: 70%; right: 8%; animation-delay: 3s; }
+
+/* การลอย */
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+}
+
+/* ===== เพิ่มแสงฟุ้งกลางจอ (ไม่เปลี่ยนสี) ===== */
+body::before {
+    content: "";
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 70%);
+    pointer-events: none;
+}
+
+/* ===== ขอบจอนุ่ม ๆ ===== */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.05);
+}
+
+</style>
+
+
+</head>
+<body>
+
+    <!-- ไอคอนลอย -->
+    <i class="fas fa-graduation-cap floating-icon icon1"></i>
+    <i class="fas fa-book floating-icon icon2"></i>
+    <i class="fas fa-pen floating-icon icon3"></i>
+    <i class="fas fa-laptop floating-icon icon4"></i>
+
+    <header>
+        <h1>หน้าหลักของเว็บไซต์</h1>
+        <h4>กรอกข้อมูลให้ครบถ้วนก่อนเข้าสู่เนื้อหา</h4>
+    </header>
+
+
+
+           <a href="index2.html" 
+   style="text-decoration:none;">
+    <button type="button"
+    style="padding:15px; font-size:16px; border-radius:40px; cursor:pointer;">
+        🚀 เข้าสู่เนื้อหา
+    </button>
+</a>
+
+        </form>
+
+    </section>
+
+    <script>
+        document.getElementById("infoForm").addEventListener("submit", function(event){
+            event.preventDefault();
+
+            const name = document.getElementById("fullname").value;
+            const classroom = document.getElementById("classroom").value;
+            const number = document.getElementById("number").value;
+
+            if(name && classroom && number){
+                localStorage.setItem("studentName", name);
+                localStorage.setItem("studentClass", classroom);
+                localStorage.setItem("studentNumber", number);
+                window.location.href = "content.html";
+            }
+        });
+    </script>
+    
+
+</body>
+</html>

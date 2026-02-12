@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เรียนรู้การเขียนอัลกอริธึม | Algorithm & Computational Thinking</title>
+
+    <link rel="stylesheet" href="style-dark.css">
+</head>
+<body>
+
+<button id="darkToggle" class="toggle">🌙 Dark Mode</button>
+
+<header>
+    <h1>หน่วยการเรียนรู้ที่ 1: การออกแบบและการเขียนอัลกอริทึม</h1>
+</header>
+
+<main>
+    <section class="section">
+        <h2>แนวคิดเชิงนามธรรม (Abstraction)</h2>
+        <p>คือการเลือกเฉพาะสาระสำคัญของปัญหา</p>
+    </section>
+</main>
+
+<footer>
+    <p>© Student Project</p>
+</footer>
+
+<script>
+const toggle = document.getElementById("darkToggle");
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  toggle.textContent = document.body.classList.contains("dark")
+    ? "☀️ Light Mode"
+    : "🌙 Dark Mode";
+});
+</script>
+
+</body>
+</html>

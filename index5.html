@@ -1,0 +1,299 @@
+    <!DOCTYPE html>
+    <html lang="th">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>เรียนรู้การเขียนอัลกอริธึม | Algorithm & Computational Thinking</title>
+        <meta name="description" content="เว็บไซต์เพื่อการเรียนรู้การเขียนอัลกอริธึม แนวคิดเชิงคำนวณ Computational Thinking ผังงาน Pseudocode และแนวข้อสอบแบบเจาะลึก">
+        <meta name="keywords" content="อัลกอริธึม, Algorithm, Computational Thinking, ผังงาน, Pseudocode">
+        <meta name="author" content="Student Project">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://yourdomain.com/">
+
+        <meta property="og:title" content="เว็บไซต์เรียนรู้การเขียนอัลกอริธึม">
+        <meta property="og:description" content="แหล่งเรียนรู้ Algorithm และ Computational Thinking สำหรับผู้เริ่มต้น">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://yourdomain.com/">
+        <meta property="og:locale" content="th_TH">
+
+        <link rel="stylesheet" href="style.css">
+
+        <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "เว็บไซต์เรียนรู้อัลกอริธึม",
+        "description": "แหล่งเรียนรู้ Algorithm และ Computational Thinking สำหรับผู้เริ่มต้น",
+        "url": "https://yourdomain.com",
+        "educationalLevel": "Beginner",
+        "teaches": "Algorithm, Computational Thinking, Programming"
+        }
+        </script>
+    </head>
+    <body>
+    <header>
+        <h1>หน่วยการเรียนรู้ที่ 4:  การใช้งานเทคโนโลยีสารสนเทศอย่างปลอดภัย</h1>
+        <nav role="navigation" aria-label="เมนูหลัก">
+            <ul>
+                <li><a href="index2.html">หน่วยการเรียนรู้ที่ 1</a></li>
+                <li><a href="index3.html">หน่วยการเรียนรู้ที่ 2</a></li>
+                <li><a href="index4.html">หน่วยการเรียนรู้ที่ 3</a></li>
+                <li><a href="index5.html">หน่วยการเรียนรู้ที่ 4</a></li>
+                <li><a href="index6.html">สมาชิกภายในกลุ่ม</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+
+<section class="section">
+    <h2> ความหมายของความปลอดภัยของระบบสารสนเทศ</h2>
+    <p>
+        ความปลอดภัยของระบบสารสนเทศ หมายถึง การปกป้องอุปกรณ์และข้อมูลที่เกี่ยวข้องกับ
+        เทคโนโลยีสารสนเทศ เช่น ฮาร์ดแวร์ ซอฟต์แวร์ ข้อมูล ระบบเครือข่าย และการสื่อสาร
+        เพื่อป้องกันการเข้าถึงหรือการกระทำที่ไม่ได้รับอนุญาต
+    </p>
+</section>
+
+<section class="section">
+    <h2> ประเภทของภัยคุกคามต่อเทคโนโลยีสารสนเทศ</h2>
+    <ul>
+        <li><strong>ภัยคุกคามต่อฮาร์ดแวร์:</strong> ไฟฟ้าขัดข้อง เครื่องชำรุด ความร้อน น้ำ ไฟฟ้าลัดวงจร</li>
+        <li><strong>ภัยคุกคามต่อซอฟต์แวร์:</strong> โปรแกรมไวรัส มัลแวร์ ซอฟต์แวร์ผิดพลาด</li>
+        <li><strong>ภัยคุกคามต่อข้อมูล:</strong> การลบ ขโมย หรือแก้ไขข้อมูลโดยไม่ได้รับอนุญาต</li>
+        <li><strong>ภัยคุกคามต่อเครือข่าย:</strong> การดักจับข้อมูล การโจมตีเครือข่าย</li>
+    </ul>
+</section>
+
+<section class="section">
+    <h2> ภัยคุกคามต่อระบบรักษาความปลอดภัยทางคอมพิวเตอร์</h2>
+    <ul>
+        <li><strong>มัลแวร์ (Malware):</strong> โปรแกรมที่มุ่งทำลายระบบหรือขโมยข้อมูล</li>
+        <li><strong>ไวรัส (Virus):</strong> โปรแกรมที่คัดลอกตัวเองและทำลายข้อมูล</li>
+        <li><strong>หนอน (Worm):</strong> แพร่กระจายผ่านเครือข่ายโดยไม่ต้องอาศัยผู้ใช้</li>
+        <li><strong>โทรจัน (Trojan Horse):</strong> โปรแกรมแฝงในรูปแบบโปรแกรมปกติ</li>
+        <li><strong>สปายแวร์ (Spyware):</strong> แอบติดตามพฤติกรรมผู้ใช้</li>
+        <li><strong>สแปม (Spam):</strong> ข้อความหรืออีเมลรบกวนผู้ใช้จำนวนมาก</li>
+        <img src="19.png" alt="">
+    </ul>
+</section>
+
+<section class="section">
+    <h2> แฮ็กเกอร์และแคร็กเกอร์</h2>
+    <ul>
+        <li>
+            <strong>แฮ็กเกอร์ (Hacker / White Hat):</strong>
+            เจาะระบบเพื่อทดสอบความปลอดภัย ไม่มีเจตนาทำลาย
+        </li>
+        <li>
+            <strong>แคร็กเกอร์ (Cracker / Black Hat):</strong>
+            เจาะระบบเพื่อขโมยหรือทำลายข้อมูล เป็นสิ่งผิดกฎหมาย
+        </li>
+        <img src="20..png" alt="">
+    </ul>
+</section>
+
+<section class="section">
+    <h2> การป้องกันและการใช้เทคโนโลยีสารสนเทศอย่างปลอดภัย</h2>
+    <ul>
+        <li>ใช้ซอฟต์แวร์ที่ถูกลิขสิทธิ์</li>
+        <li>อัปเดตระบบและโปรแกรมอย่างสม่ำเสมอ</li>
+        <li>ติดตั้งและสแกนไวรัสเป็นประจำ</li>
+        <li>ใช้ Firewall ป้องกันการบุกรุก</li>
+        <li>ตั้งรหัสผ่านที่คาดเดายาก</li>
+        <li>หลีกเลี่ยงเว็บไซต์และอีเมลที่ไม่น่าเชื่อถือ</li>
+    </ul>
+</section>
+
+<section class="section">
+    <h2>จริยธรรมและกฎหมายในการใช้คอมพิวเตอร์</h2>
+    <ul>
+        <li>ไม่ใช้คอมพิวเตอร์ก่ออาชญากรรม</li>
+        <li>ไม่สอดแนมหรือรบกวนผู้อื่น</li>
+        <li>ไม่ขโมยหรือแก้ไขข้อมูลของผู้อื่น</li>
+        <li>ไม่ละเมิดลิขสิทธิ์ซอฟต์แวร์</li>
+    </ul>
+</section>
+
+<section class="section">
+    <h2> ทรัพย์สินทางปัญญา</h2>
+    <ul>
+        <li><strong>ลิขสิทธิ์:</strong> งานเขียน เพลง โปรแกรม</li>
+        <li><strong>สิทธิบัตร:</strong> การประดิษฐ์หรือออกแบบผลิตภัณฑ์</li>
+        <li><strong>เครื่องหมายการค้า:</strong> สัญลักษณ์หรือโลโก้สินค้า</li>
+    </ul>
+</section>
+
+<section class="section">
+    <h2> สัญญาอนุญาต Creative Commons</h2>
+    <ul>
+        <li><strong>BY:</strong> ต้องแสดงที่มา</li>
+        <li><strong>NC:</strong> ห้ามใช้เชิงพาณิชย์</li>
+        <li><strong>ND:</strong> ห้ามดัดแปลง</li>
+        <li><strong>SA:</strong> ดัดแปลงต้องใช้สัญญาเดียวกัน</li>
+    </ul>
+</section>
+
+<section class="section">
+    <h2> ความเชื่อมโยงระหว่างเนื้อหากับข้อสอบ</h2>
+    <ul>
+        <li>ไฟฟ้าดับ / เครื่องเสีย → ภัยคุกคามต่อฮาร์ดแวร์</li>
+        <li>แอบติดตามข้อมูล → สปายแวร์</li>
+        <li>ดาวน์โหลดไฟล์แปลก → มัลแวร์ / โทรจัน</li>
+        <li>ลิขสิทธิ์ → ทรัพย์สินทางปัญญา / Creative Commons</li>
+    </ul>
+</section>
+
+<section class="section">
+    <h2>ความสำคัญของการใช้เทคโนโลยีสารสนเทศอย่างปลอดภัย</h2>
+    <p>
+        การใช้งานเทคโนโลยีอย่างปลอดภัยช่วยลดความเสี่ยงในการสูญหายของข้อมูล
+        ป้องกันการโจรกรรมข้อมูลส่วนตัว และทำให้ใช้งานระบบคอมพิวเตอร์ได้อย่างมีประสิทธิภาพ
+        และมีความรับผิดชอบต่อสังคม
+    </p>
+</section>
+
+</main>
+
+    <footer>
+    </footer>
+    <section id="quiz" class="section">
+        <h2>คลังข้อสอบ (บทที่ 4การใช้เทคโนโลยีสารสนเทศอย่างปลอดภัย)</h2>
+
+        <form id="quiz-form" aria-label="แบบทดสอบความรู้">
+
+            <!-- ข้อ 1 -->
+            <div class="quiz-item">
+                <p><strong>1. ระบบจ่ายไฟฟ้าเข้าสู่เครื่องคอมพิวเตอร์เกิดข้อผิดพลาดจึงทำให้อุปกรณ์ภายในชำรุดเสียหาย” จากเหตุการณ์นี้ถือเป็นภัยคุกคามต่อเทคโนโลยีสารสนเทศใด</strong></p>
+                <label><input type="radio" name="q1" value="1"> ภัยคุกคามต่อฮาร์ดแวร์
+    </label><br>
+                <label><input type="radio" name="q1" value="2"> ภัยคุกคามต่อซอฟต์แวร์
+    </label><br>
+                <label><input type="radio" name="q1" value="3"> ภัยคุกคามต่อการสื่อสาร
+    </label><br>
+                <label><input type="radio" name="q1" value="4"> ภัยคุกคามต่อระบบเครือข่าย
+    </label>
+            </div>
+
+            <!-- ข้อ 2 -->
+            <div class="quiz-item">
+                <p><strong>2. ป้องเปลี่ยนการตั้งค่าเครื่องคอมพิวเตอร์ของปุยฝ้าย โดยไม่ขออนุญาต เพื่อติดตามร่องรอยการใช้งานของปุยฝ้าย นักเรียนคิดว่าพฤติกรรมของป้อง เป็นรูปแบบภัยคุกคามต่อระบบรักษาความปลอดภัยทางคอมพิวเตอร์ในข้อใด</strong></p>
+                <label><input type="radio" name="q2" value="1"> ภัยคุกคามแก่ระบบ</label><br>
+                <label><input type="radio" name="q2" value="2"> ภัยคุกคามที่ไม่มีเป้าหมาย</label><br>
+                <label><input type="radio" name="q2" value="3"> ภัยคุกคามความเป็นส่วนตัว
+    </label><br>
+                <label><input type="radio" name="q2" value="4"> ภัยคุกคามที่สร้างความรำคาญ
+    </label>
+            </div>
+
+            <!-- ข้อ 3 -->
+            <div class="quiz-item">
+                <p><strong>3. ภัยคุกคามด้านข้อมูลในคอมพิวเตอร์ที่มักแพร่กระจายผ่านการส่งไปรษณีย์อิเล็กทรอนิกส์คือข้อใด</strong></p>
+                <label><input type="radio" name="q3" value="1">มัลแวร์</label><br>
+                <label><input type="radio" name="q3" value="2"> สปายแวร์</label><br>
+                <label><input type="radio" name="q3" value="3"> ม้าโทรจัน
+    </label><br>
+                <label><input type="radio" name="q3" value="4"> หนอนคอมพิวเตอร์ </label>
+            </div>
+
+            <!-- ข้อ 4 -->
+            <div class="quiz-item">
+                <p><strong>4. พฤติกรรมในข้อใดมีความเสี่ยงต่อภัยคุกคามด้านข้อมูลในคอมพิวเตอร์มากที่สุด</strong></p>
+                <label><input type="radio" name="q4" value="1"> คำนวณตัวเลขจากโปรแกรมเครื่องคิดเลข
+    </label><br>
+                <label><input type="radio" name="q4" value="2"> การออกแบบรูปภาพจากโปรแกรมออกแบบ
+    </label><br>
+                <label><input type="radio" name="q4" value="3"> การพิมพ์เอกสารในโปรแกรมประมวลคำ
+    </label><br>
+                <label><input type="radio" name="q4" value="4"> การดาวน์โหลดโปรแกรมต่าง ๆ จากอินเทอร์เน็ต
+            </div>
+
+            <!-- ข้อ 5 -->
+            <div class="quiz-item">
+                <p><strong>5. การส่งข้อความหรืออีเมลรบกวนผู้ใช้งานในระบบหลาย ๆ คน เพื่อสร้างจุดสนใจ แต่ไม่ก่อให้เกิดความเสียหายหรือที่เรียกว่า สแปม (Spam) จัดเป็นภัยคุกคามรูปแบบใด</strong></p>
+                <label><input type="radio" name="q5" value="1"> ภัยคุกคามแก่ระบบ
+    </label><br>
+                <label><input type="radio" name="q5" value="2"> ภัยคุกคามที่ไม่มีเป้าหมาย
+    </label><br>
+                <label><input type="radio" name="q5" value="3"> ภัยคุกคามต่อผู้ใช้และระบบ
+    </label><br>
+                <label><input type="radio" name="q5" value="4"> ภัยคุกคามที่สร้างความรำคาญ
+
+    </label>
+            </div>
+
+            <!-- ข้อ 6 -->
+            <div class="quiz-item">
+                <p><strong>6. บุคคลใดปฏิบัติตนในการป้องกันการถูกโจรกรรมข้อมูลได้เหมาะสม</strong></p>
+                <label><input type="radio" name="q6" value="1"> วารีบอกรหัสผ่านอีเมลให้ภูผา</label><br>
+                <label><input type="radio" name="q6" value="2"> อุบลเปิดอ่านอีเมลขยะเพื่อเปิดดูจดหมายที่ได้รับ
+    </label><br>
+                <label><input type="radio" name="q6" value="3"> ปัญญาดาวน์โหลดเกมตามที่มีโฆษณาในหน้าเว็บไซต์
+    </label><br>
+                <label><input type="radio" name="q6" value="4"> วินัยสแกนแฟลชไดร์ฟหรืออุปกรณ์ภายนอกก่อนใช้งานทุกครั้ง
+    </label>
+            </div>
+
+            <!-- ข้อ 7 -->
+            <div class="quiz-item">
+                <p><strong>7. สมใจแต่งนิยายแล้วเผยแพร่ลงบนสื่อโซเชียลมีเดียต่าง ๆ ข้อใดเป็นสิทธิที่เกี่ยวข้องกับผลงานของสมใจ</strong></p>
+                <label><input type="radio" name="q7" value="1"> ลิขสิทธิ์ (Input)
+    </label><br>
+                <label><input type="radio" name="q7" value="2"> สิทธิบัตร (Storage)
+    </label><br>
+                <label><input type="radio" name="q7" value="3"> เครื่องหมายการค้า (Process)</label><br>
+                <label><input type="radio" name="q7" value="4"> ทรัพย์สินทางปัญญา (Output)
+    </label>
+            </div>
+
+            <!-- ข้อ 8 -->
+            <div class="quiz-item">
+                <p><strong>8. เพราะเหตุใดจึงต้องจัดทำสัญญาอนุญาตครีเอทีฟคอมมอนส์ (Creative Commons)</strong></p>
+                <label><input type="radio" name="q8" value="1"> เพื่อเป็นกฎหมายในการสร้างและใช้ข้อมูลสารสนเทศ </label><br>
+                <label><input type="radio" name="q8" value="2"> เพื่อให้มีการแลกเปลี่ยนข้อมูลสารสนเทศอย่างหลากหลาย
+    </label><br>
+                <label><input type="radio" name="q8" value="3"> เพื่อให้เจ้าของผลงานมอบสิทธิ์แก่บุคคลอื่นในการกระทำกับผลงานของตน
+    </label><br>
+                <label><input type="radio" name="q8" value="4"> เพื่อส่งเสริมสนับสนุนให้มีการสร้างสรรค์และใช้สารสนเทศบนเครือข่ายอินเทอร์เน็ต
+    </label>
+            </div>
+
+            <!-- ข้อ 9 -->
+            <div class="quiz-item">
+                <p><strong>9. หากนักเรียนสร้างเว็บเพจ และไม่ต้องการให้ผู้อื่นนำข้อมูลต่าง ๆ ที่ปรากฏอยู่ในเว็บเพจไปใช้เพื่อการค้า นักเรียนจะต้องกำหนดตัวย่อของชื่อเงื่อนไขของสัญญาอนุญาตอย่างไร</strong></p>
+                <label><input type="radio" name="q9" value="1"> ND </label><br>
+                <label><input type="radio" name="q9" value="2"> SA
+    </label><br>
+                <label><input type="radio" name="q9" value="3"> BY
+    </label><br>
+                <label><input type="radio" name="q9" value="4"> NC
+    </label>
+            </div>
+
+            <!-- ข้อ 10 -->
+            <div class="quiz-item">
+                <p><strong>10. ขณะค้นหาข้อมูลบนเว็บไซต์ต่าง ๆ หากพบสัญลักษณ์ (CC-BY) นักเรียนจะสามารถใช้งานข้อมูลนั้นได้อย่างไร</strong></p>
+                <label><input type="radio" name="q10" value="1"> ไม่สามารถนำไปใช้งานได้</label><br>
+                <label><input type="radio" name="q10" value="2"> ใช้งานได้ โดยนำไปใช้เพื่อวัตถุประสงค์ทางการค้า
+    </label><br>
+                <label><input type="radio" name="q10" value="3"> ใช้งานได้ ตามรูปแบบที่กำหนดแต่ต้องแสดงที่มาของข้อมูล
+    </label><br>
+                <label><input type="radio" name="q10" value="4"> ใช้งานได้ โดยดัดแปลงผลงานให้มีความแตกต่างก่อนเผยแพร่
+    </label>
+            </div>
+
+
+                    <button type="submit">ตรวจสอบคำตอบ</button>
+                </form>
+
+                <div id="quiz-result" role="status" aria-live="polite"></div>
+            </section>
+        </main>
+
+        <footer role="contentinfo">
+
+
+        <script src="script4.js"></script>
+    </body>
+    </html>
+
+
